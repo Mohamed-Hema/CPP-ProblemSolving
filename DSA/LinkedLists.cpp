@@ -13,16 +13,14 @@ void display();
 void deleteNode(int value);
 void insert_beg(int value);
 void delete_beg();
+void delete_end();
 int main()
 {
     insertNode(5);
     insertNode(10);
     insertNode(15);
     insertNode(7);
-    // display();
-    // deleteNode(15);
-    insert_beg(1000);
-    delete_beg();
+    delete_end();
     display();
     return 0;
 }
@@ -105,5 +103,28 @@ void delete_beg()
         node *first_node = head;
         head = first_node->next;
         delete (first_node);
+    }
+}
+
+void delete_end()
+{
+    if (head == NULL)
+    {
+        cout << "LinkedList is emppty" << endl;
+    }
+    else if (head->next == NULL)
+    {
+        delete (head);
+        head = NULL;
+    }
+    else
+    {
+        node *ptr = head;
+        while (ptr->next->next != NULL)
+        {
+            ptr = ptr->next;
+        }
+        delete (ptr->next);
+        ptr->next = NULL;
     }
 }
