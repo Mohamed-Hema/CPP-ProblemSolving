@@ -30,5 +30,10 @@ int main()
          << "\n";
     cin >> b3.name;
     cout << "Third book name: " << b3.name;
+
+    book books[10];
+    books[0].name = "bookarray";
+
+    cout << books[0].name;
     return 0;
 }
