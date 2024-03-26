@@ -20,7 +20,7 @@ int main()
     insertNode(10);
     insertNode(15);
     insertNode(7);
-    delete_end();
+
     display();
     return 0;
 }

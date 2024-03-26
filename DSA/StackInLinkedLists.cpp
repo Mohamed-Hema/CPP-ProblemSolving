@@ -11,8 +11,13 @@ node *top = NULL;
 void display();
 void push(int value);
 int pop();
+int peek();
 int main()
 {
+    push(10);
+    push(5);
+    push(200);
+    cout << "Top of the stack: " << peek() << endl;
     display();
     return 0;
 }
@@ -59,5 +64,18 @@ int pop()
         value = first_node->data;
         delete (first_node);
         return value;
+    }
+}
+
+int peek()
+{
+    if (top == NULL)
+    {
+        cout << "stack underflow. \n";
+        return -1;
+    }
+    else
+    {
+        return top->data;
     }
 }
