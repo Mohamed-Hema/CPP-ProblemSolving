@@ -1,17 +1,18 @@
 #include <iostream>
+#include <iterator>
+using namespace std;
+
+void printNumbers(int numbers[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << numbers[i];
+    }
+}
 
 int main()
 {
-    // for (int i = 1; i <= 55; i++)
-    // {
-
-    //     std::cout << "L " << i << "\n";
-    // }
-    int x = 6;
-    int y = 4;
-    int swap = x; // 6
-    x = y;
-    y = swap;
-    std::cout << x << y << std::endl;
+    int numbers[] = {10, 20, 30};
+    printNumbers(numbers, std::size(numbers));
     return 0;
 }

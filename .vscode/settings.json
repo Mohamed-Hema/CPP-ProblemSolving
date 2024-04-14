@@ -75,7 +75,9 @@
     "random": "cpp",
     "type_traits": "cpp",
     "utility": "cpp",
-    "numbers": "cpp"
+    "numbers": "cpp",
+    "__tree": "cpp",
+    "execution": "cpp"
   },
   "C_Cpp_Runner.cCompilerPath": "clang",
   "C_Cpp_Runner.cppCompilerPath": "clang++",
